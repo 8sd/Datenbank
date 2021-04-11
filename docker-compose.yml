@@ -1,0 +1,8 @@
+version: "2"
+
+services:
+  tg-bot:
+    image: datenbanktgbot
+    restart: always
+    volumes:
+      - ./list:/list:ro
