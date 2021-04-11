@@ -9,7 +9,7 @@ with open('../list', "r") as l:
 	datenbank = l.readlines()
 
 def wkwt(update: Update, context: CallbackContext) -> None:
-    update.message.reply_text(random.choice(datenbank))
+    update.message.reply_text('Ihr könnt ' + random.choice(datenbank))
 
 def start(update: Update, context: CallbackContext) -> None:
     custom_keyboard = [['/wkwt']] 
