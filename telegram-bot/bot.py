@@ -12,6 +12,7 @@ def wkwt(update: Update, context: CallbackContext) -> None:
     update.message.reply_text('Ihr könnt ' + random.choice(datenbank))
 
 def start(update: Update, context: CallbackContext) -> None:
+    print("register new user" + str(update.effective_user.id))
     custom_keyboard = [['/wkwt']] 
     reply_markup = ReplyKeyboardMarkup(custom_keyboard)
     context.bot.send_message(chat_id=update.effective_user.id, 
