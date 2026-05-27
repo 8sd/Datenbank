@@ -2,7 +2,8 @@ version: "2"
 
 services:
   tg-bot:
-    image: datenbanktgbot
+    build:
+      context: telegram-bot
     restart: always
     volumes:
       - ./list:/list:ro
